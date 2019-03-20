@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4114BE02240D2BE005756EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BDF2240D2BE005756EB /* AppDelegate.m */; };
+		A4114BE32240D2BE005756EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BE22240D2BE005756EB /* ViewController.m */; };
+		A4114BE52240D2BF005756EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4114BE42240D2BF005756EB /* Assets.xcassets */; };
+		A4114BE82240D2BF005756EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4114BE62240D2BF005756EB /* Main.storyboard */; };
+		A4114BEB2240D2BF005756EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BEA2240D2BF005756EB /* main.m */; };
+		A4114BF62240D2BF005756EB /* XQJsonCompareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BF52240D2BF005756EB /* XQJsonCompareTests.m */; };
+		A4114C012240D2BF005756EB /* XQJsonCompareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */; };
+		A490790D2241D53700FCE0BF /* XQHistoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A490790C2241D53700FCE0BF /* XQHistoryRecord.m */; };
+		A8D8BC4CFC6AB1A25919AEBE /* libPods-XQJsonCompareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB87250FD8C26264C0BE8E79 /* libPods-XQJsonCompareTests.a */; };
+		B2F758F404E015E35E2DB23F /* libPods-XQJsonCompareUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EC86E77BD76473DDA67F5B /* libPods-XQJsonCompareUITests.a */; };
+		F65BFB1B463E496D0E8734A0 /* libPods-XQJsonCompare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D041EC737B41B537AC20A3 /* libPods-XQJsonCompare.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4114BF22240D2BF005756EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4114BD32240D2BE005756EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4114BDA2240D2BE005756EB;
+			remoteInfo = XQJsonCompare;
+		};
+		A4114BFD2240D2BF005756EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4114BD32240D2BE005756EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4114BDA2240D2BE005756EB;
+			remoteInfo = XQJsonCompare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06D041EC737B41B537AC20A3 /* libPods-XQJsonCompare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XQJsonCompare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		248C53ECA8125738033FF9A8 /* Pods-XQJsonCompareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareUITests/Pods-XQJsonCompareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35D6948452DB33F0274D7462 /* Pods-XQJsonCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareTests/Pods-XQJsonCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E8D218CD39BDF639A2891D7 /* Pods-XQJsonCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareTests/Pods-XQJsonCompareTests.release.xcconfig"; sourceTree = "<group>"; };
+		95747FE384128C99C43CC232 /* Pods-XQJsonCompareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareUITests/Pods-XQJsonCompareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4114BDB2240D2BE005756EB /* XQJsonCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQJsonCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4114BDE2240D2BE005756EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4114BDF2240D2BE005756EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4114BE12240D2BE005756EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A4114BE22240D2BE005756EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A4114BE42240D2BF005756EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4114BE72240D2BF005756EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4114BE92240D2BF005756EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4114BEA2240D2BF005756EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4114BEC2240D2BF005756EB /* XQJsonCompare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XQJsonCompare.entitlements; sourceTree = "<group>"; };
+		A4114BF12240D2BF005756EB /* XQJsonCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XQJsonCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4114BF52240D2BF005756EB /* XQJsonCompareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJsonCompareTests.m; sourceTree = "<group>"; };
+		A4114BF72240D2BF005756EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4114BFC2240D2BF005756EB /* XQJsonCompareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XQJsonCompareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJsonCompareUITests.m; sourceTree = "<group>"; };
+		A4114C022240D2BF005756EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A490790B2241D53700FCE0BF /* XQHistoryRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQHistoryRecord.h; sourceTree = "<group>"; };
+		A490790C2241D53700FCE0BF /* XQHistoryRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQHistoryRecord.m; sourceTree = "<group>"; };
+		AF4C23D6851B52522B169808 /* Pods-XQJsonCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompare/Pods-XQJsonCompare.release.xcconfig"; sourceTree = "<group>"; };
+		D6D8A54190812F7D14ADEED2 /* Pods-XQJsonCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompare/Pods-XQJsonCompare.debug.xcconfig"; sourceTree = "<group>"; };
+		E8EC86E77BD76473DDA67F5B /* libPods-XQJsonCompareUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XQJsonCompareUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB87250FD8C26264C0BE8E79 /* libPods-XQJsonCompareTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XQJsonCompareTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4114BD82240D2BE005756EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65BFB1B463E496D0E8734A0 /* libPods-XQJsonCompare.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BEE2240D2BF005756EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D8BC4CFC6AB1A25919AEBE /* libPods-XQJsonCompareTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BF92240D2BF005756EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F758F404E015E35E2DB23F /* libPods-XQJsonCompareUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016E7DD7CA62F32E5A3E67A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6D8A54190812F7D14ADEED2 /* Pods-XQJsonCompare.debug.xcconfig */,
+				AF4C23D6851B52522B169808 /* Pods-XQJsonCompare.release.xcconfig */,
+				35D6948452DB33F0274D7462 /* Pods-XQJsonCompareTests.debug.xcconfig */,
+				4E8D218CD39BDF639A2891D7 /* Pods-XQJsonCompareTests.release.xcconfig */,
+				95747FE384128C99C43CC232 /* Pods-XQJsonCompareUITests.debug.xcconfig */,
+				248C53ECA8125738033FF9A8 /* Pods-XQJsonCompareUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4114BD22240D2BE005756EB = {
+			isa = PBXGroup;
+			children = (
+				A4114BDD2240D2BE005756EB /* XQJsonCompare */,
+				A4114BF42240D2BF005756EB /* XQJsonCompareTests */,
+				A4114BFF2240D2BF005756EB /* XQJsonCompareUITests */,
+				A4114BDC2240D2BE005756EB /* Products */,
+				016E7DD7CA62F32E5A3E67A9 /* Pods */,
+				B4ACAB41AB29C0AD57B8DC24 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4114BDC2240D2BE005756EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4114BDB2240D2BE005756EB /* XQJsonCompare.app */,
+				A4114BF12240D2BF005756EB /* XQJsonCompareTests.xctest */,
+				A4114BFC2240D2BF005756EB /* XQJsonCompareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4114BDD2240D2BE005756EB /* XQJsonCompare */ = {
+			isa = PBXGroup;
+			children = (
+				A4114BDE2240D2BE005756EB /* AppDelegate.h */,
+				A4114BDF2240D2BE005756EB /* AppDelegate.m */,
+				A4114BE12240D2BE005756EB /* ViewController.h */,
+				A4114BE22240D2BE005756EB /* ViewController.m */,
+				A490790B2241D53700FCE0BF /* XQHistoryRecord.h */,
+				A490790C2241D53700FCE0BF /* XQHistoryRecord.m */,
+				A4114BE42240D2BF005756EB /* Assets.xcassets */,
+				A4114BE62240D2BF005756EB /* Main.storyboard */,
+				A4114BE92240D2BF005756EB /* Info.plist */,
+				A4114BEA2240D2BF005756EB /* main.m */,
+				A4114BEC2240D2BF005756EB /* XQJsonCompare.entitlements */,
+			);
+			path = XQJsonCompare;
+			sourceTree = "<group>";
+		};
+		A4114BF42240D2BF005756EB /* XQJsonCompareTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4114BF52240D2BF005756EB /* XQJsonCompareTests.m */,
+				A4114BF72240D2BF005756EB /* Info.plist */,
+			);
+			path = XQJsonCompareTests;
+			sourceTree = "<group>";
+		};
+		A4114BFF2240D2BF005756EB /* XQJsonCompareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */,
+				A4114C022240D2BF005756EB /* Info.plist */,
+			);
+			path = XQJsonCompareUITests;
+			sourceTree = "<group>";
+		};
+		B4ACAB41AB29C0AD57B8DC24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D041EC737B41B537AC20A3 /* libPods-XQJsonCompare.a */,
+				EB87250FD8C26264C0BE8E79 /* libPods-XQJsonCompareTests.a */,
+				E8EC86E77BD76473DDA67F5B /* libPods-XQJsonCompareUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4114BDA2240D2BE005756EB /* XQJsonCompare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4114C052240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompare" */;
+			buildPhases = (
+				4D275F4187239FC7C8FC24C7 /* [CP] Check Pods Manifest.lock */,
+				A4114BD72240D2BE005756EB /* Sources */,
+				A4114BD82240D2BE005756EB /* Frameworks */,
+				A4114BD92240D2BE005756EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XQJsonCompare;
+			productName = XQJsonCompare;
+			productReference = A4114BDB2240D2BE005756EB /* XQJsonCompare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4114BF02240D2BF005756EB /* XQJsonCompareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4114C082240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompareTests" */;
+			buildPhases = (
+				5A1A572BE2828B96B9B5321B /* [CP] Check Pods Manifest.lock */,
+				A4114BED2240D2BF005756EB /* Sources */,
+				A4114BEE2240D2BF005756EB /* Frameworks */,
+				A4114BEF2240D2BF005756EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4114BF32240D2BF005756EB /* PBXTargetDependency */,
+			);
+			name = XQJsonCompareTests;
+			productName = XQJsonCompareTests;
+			productReference = A4114BF12240D2BF005756EB /* XQJsonCompareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4114BFB2240D2BF005756EB /* XQJsonCompareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4114C0B2240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompareUITests" */;
+			buildPhases = (
+				23D75EB2E3E129B16B865580 /* [CP] Check Pods Manifest.lock */,
+				A4114BF82240D2BF005756EB /* Sources */,
+				A4114BF92240D2BF005756EB /* Frameworks */,
+				A4114BFA2240D2BF005756EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4114BFE2240D2BF005756EB /* PBXTargetDependency */,
+			);
+			name = XQJsonCompareUITests;
+			productName = XQJsonCompareUITests;
+			productReference = A4114BFC2240D2BF005756EB /* XQJsonCompareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4114BD32240D2BE005756EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = WXQ;
+				TargetAttributes = {
+					A4114BDA2240D2BE005756EB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A4114BF02240D2BF005756EB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A4114BDA2240D2BE005756EB;
+					};
+					A4114BFB2240D2BF005756EB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A4114BDA2240D2BE005756EB;
+					};
+				};
+			};
+			buildConfigurationList = A4114BD62240D2BE005756EB /* Build configuration list for PBXProject "XQJsonCompare" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4114BD22240D2BE005756EB;
+			productRefGroup = A4114BDC2240D2BE005756EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4114BDA2240D2BE005756EB /* XQJsonCompare */,
+				A4114BF02240D2BF005756EB /* XQJsonCompareTests */,
+				A4114BFB2240D2BF005756EB /* XQJsonCompareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4114BD92240D2BE005756EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4114BE52240D2BF005756EB /* Assets.xcassets in Resources */,
+				A4114BE82240D2BF005756EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BEF2240D2BF005756EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BFA2240D2BF005756EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23D75EB2E3E129B16B865580 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XQJsonCompareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D275F4187239FC7C8FC24C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XQJsonCompare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A1A572BE2828B96B9B5321B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XQJsonCompareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4114BD72240D2BE005756EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4114BE32240D2BE005756EB /* ViewController.m in Sources */,
+				A4114BEB2240D2BF005756EB /* main.m in Sources */,
+				A490790D2241D53700FCE0BF /* XQHistoryRecord.m in Sources */,
+				A4114BE02240D2BE005756EB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BED2240D2BF005756EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4114BF62240D2BF005756EB /* XQJsonCompareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4114BF82240D2BF005756EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4114C012240D2BF005756EB /* XQJsonCompareUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4114BF32240D2BF005756EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4114BDA2240D2BE005756EB /* XQJsonCompare */;
+			targetProxy = A4114BF22240D2BF005756EB /* PBXContainerItemProxy */;
+		};
+		A4114BFE2240D2BF005756EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4114BDA2240D2BE005756EB /* XQJsonCompare */;
+			targetProxy = A4114BFD2240D2BF005756EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4114BE62240D2BF005756EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4114BE72240D2BF005756EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4114C032240D2BF005756EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A4114C042240D2BF005756EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A4114C062240D2BF005756EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6D8A54190812F7D14ADEED2 /* Pods-XQJsonCompare.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XQJsonCompare/XQJsonCompare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A4114C072240D2BF005756EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4C23D6851B52522B169808 /* Pods-XQJsonCompare.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XQJsonCompare/XQJsonCompare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A4114C092240D2BF005756EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D6948452DB33F0274D7462 /* Pods-XQJsonCompareTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XQJsonCompare.app/Contents/MacOS/XQJsonCompare";
+			};
+			name = Debug;
+		};
+		A4114C0A2240D2BF005756EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8D218CD39BDF639A2891D7 /* Pods-XQJsonCompareTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XQJsonCompare.app/Contents/MacOS/XQJsonCompare";
+			};
+			name = Release;
+		};
+		A4114C0C2240D2BF005756EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95747FE384128C99C43CC232 /* Pods-XQJsonCompareUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XQJsonCompare;
+			};
+			name = Debug;
+		};
+		A4114C0D2240D2BF005756EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248C53ECA8125738033FF9A8 /* Pods-XQJsonCompareUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HYE5WA8QEX;
+				INFOPLIST_FILE = XQJsonCompareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxqlm.XQJsonCompareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XQJsonCompare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4114BD62240D2BE005756EB /* Build configuration list for PBXProject "XQJsonCompare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4114C032240D2BF005756EB /* Debug */,
+				A4114C042240D2BF005756EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4114C052240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4114C062240D2BF005756EB /* Debug */,
+				A4114C072240D2BF005756EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4114C082240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4114C092240D2BF005756EB /* Debug */,
+				A4114C0A2240D2BF005756EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4114C0B2240D2BF005756EB /* Build configuration list for PBXNativeTarget "XQJsonCompareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4114C0C2240D2BF005756EB /* Debug */,
+				A4114C0D2240D2BF005756EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4114BD32240D2BE005756EB /* Project object */;
+}
