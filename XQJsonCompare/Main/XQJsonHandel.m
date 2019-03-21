@@ -1,132 +1,14 @@
 //
-//  ViewController.m
+//  XQJsonHandel.m
 //  XQJsonCompare
 //
-//  Created by WXQ on 2019/3/19.
+//  Created by WXQ on 2019/3/21.
 //  Copyright © 2019 WXQ. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <XQProjectTool/NSDictionary+XQJson.h>
-#import <XQProjectTool/XQAlertSystem.h>
-#import <YYModel/YYModel.h>
-#import "XQHistoryRecord.h"
+#import "XQJsonHandel.h"
 
-typedef NS_ENUM(NSInteger, XQAnalysisError) {
-    XQAnalysisErrorNil = 0,
-    XQAnalysisErrorSucceed,
-    XQAnalysisErrorJson1Error,
-    XQAnalysisErrorJson2Error,
-};
-
-@interface ViewController () <NSTableViewDataSource, NSTableViewDelegate>
-
-@property (weak) IBOutlet NSTableView *tableView;
-@property (weak) IBOutlet NSTableColumn *tableColumn;
-
-@property (unsafe_unretained) IBOutlet NSTextView *oneView;
-@property (unsafe_unretained) IBOutlet NSTextView *twoView;
-
-@property (unsafe_unretained) IBOutlet NSTextView *oneMinusTView;
-@property (unsafe_unretained) IBOutlet NSTextView *twoMinusTView;
-
-@property (unsafe_unretained) IBOutlet NSTextView *oneValueTView;
-@property (unsafe_unretained) IBOutlet NSTextView *twoValueTView;
-@property (unsafe_unretained) IBOutlet NSTextView *equalTView;
-
-/** <#note#> */
-@property (nonatomic, copy) NSArray <XQHistoryRecord *> *modelArr;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.modelArr = [XQHistoryRecord readAllModels];
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-    self.tableColumn.title = @"历史记录";
-    self.tableColumn.width = 240;
-    self.tableColumn.maxWidth = 240;
-    self.tableColumn.minWidth = 240;
-}
-
-#pragma mark - respondsTo
-
-- (IBAction)respondsToOutResult:(id)sender {
-    
-}
-
-- (IBAction)respondsToRemoveFormat:(id)sender {
-    self.oneView.string = [[self class] xq_removeFormatWithStr:self.oneView.string];
-    self.twoView.string = [[self class] xq_removeFormatWithStr:self.twoView.string];
-}
-
-- (IBAction)respondsToAnalysis:(id)sender {
-    [[self class] modelWithJson1:self.oneView.string json2:self.twoView.string callback:^(XQHistoryRecord *model, XQAnalysisError error) {
-        
-        switch (error) {
-            case XQAnalysisErrorNil:{
-                [XQAlertSystem alertSheetWithTitle:@"数据不能为空" message:@"" contentArr:@[@"确定"] callback:^(NSInteger index) {
-                    
-                }];
-            }
-                break;
-                
-            case XQAnalysisErrorJson1Error:{
-                [XQAlertSystem alertSheetWithTitle:@"Json1无法解析" message:@"" contentArr:@[@"确定"] callback:^(NSInteger index) {
-                    
-                }];
-            }
-                break;
-                
-            case XQAnalysisErrorJson2Error:{
-                [XQAlertSystem alertSheetWithTitle:@"Json2无法解析" message:@"" contentArr:@[@"确定"] callback:^(NSInteger index) {
-                    
-                }];
-            }
-                break;
-                
-            case XQAnalysisErrorSucceed:{
-                self.oneMinusTView.string = model.json1ToJson2KeyMinus;
-                self.twoMinusTView.string = model.json2ToJson1KeyMinus;
-                
-                self.oneValueTView.string = model.json1ValueDifference;
-                self.twoValueTView.string = model.json2ValueDifference;
-                
-                self.equalTView.string = model.equalJson;
-            }
-                break;
-                
-            default:
-                break;
-        }
-        
-    }];
-}
-
-
-#pragma mark - NSTableViewDataSource
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NSLog(@"%s", __func__);
-    return 1;
-}
-
-#pragma mark - NSTableViewDelegate
-
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSLog(@"%s", __func__);
-    return nil;
-}
-
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 100;
-}
+@implementation XQJsonHandel
 
 #pragma mark - Other Method
 
@@ -178,8 +60,8 @@ typedef NS_ENUM(NSInteger, XQAnalysisError) {
     [twoMinusSet minusSet:oneSet];
     
     
-//    self.oneMinusTView.string = [[self class] strWithSet:oneMinusSet dic:oneDic];
-//    self.twoMinusTView.string = [[self class] strWithSet:twoMinusSet dic:twoDic];
+    //    self.oneMinusTView.string = [[self class] strWithSet:oneMinusSet dic:oneDic];
+    //    self.twoMinusTView.string = [[self class] strWithSet:twoMinusSet dic:twoDic];
     
     //    NSLog(@"\n交集:%@ \none多出key:%@, \ntwo多出key:%@", intersectSet, oneMinusSet, twoMinusSet);
     
@@ -253,13 +135,15 @@ typedef NS_ENUM(NSInteger, XQAnalysisError) {
         [equalMuDic addEntriesFromDictionary:@{key:oneDic[key]}];
     }
     
-//    self.oneValueTView.string = [NSDictionary jsonStrWithDic:oneMuDic];
-//    self.twoValueTView.string = [NSDictionary jsonStrWithDic:twoMuDic];
-//
-//    self.equalTView.string = [NSDictionary jsonStrWithDic:equalMuDic];
+    //    self.oneValueTView.string = [NSDictionary jsonStrWithDic:oneMuDic];
+    //    self.twoValueTView.string = [NSDictionary jsonStrWithDic:twoMuDic];
+    //
+    //    self.equalTView.string = [NSDictionary jsonStrWithDic:equalMuDic];
     
     if (callback) {
         XQHistoryRecord *model = [XQHistoryRecord new];
+        model.json1 = json1;
+        model.json2 = json2;
         model.json1ToJson2KeyMinus = [[self class] strWithSet:oneMinusSet dic:oneDic];
         model.json2ToJson1KeyMinus = [[self class] strWithSet:twoMinusSet dic:twoDic];
         model.json1ValueDifference = [NSDictionary jsonStrWithDic:oneMuDic];
@@ -318,19 +202,4 @@ typedef NS_ENUM(NSInteger, XQAnalysisError) {
 }
 
 
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-

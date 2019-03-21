@@ -17,16 +17,6 @@
 
 @implementation XQHistoryRecord
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _uuidStr = [NSUUID UUID].UUIDString;
-        NSLog(@"%s", __func__);
-    }
-    return self;
-}
-
 /**
  写入model
  */
@@ -38,6 +28,40 @@
     NSMutableArray *muArr = [self readAll].mutableCopy;
     [muArr insertObject:[model yy_modelToJSONString] atIndex:0];
     [[NSUserDefaults standardUserDefaults] setObject:muArr forKey:XQ_UD_Key_JsonHistoryRecord];
+}
+
+/**
+ 删除model
+ */
++ (void)deleteWithUUIDStr:(NSString *)uuidStr {
+    NSMutableArray *muArr = [self readAllModels].mutableCopy;
+    for (int i = 0; i < muArr.count; i++) {
+        XQHistoryRecord *model = muArr[i];
+        
+        if (model.uuidStr.length == 0) {
+            [muArr removeObject:model];
+        }
+        
+        if ([model.uuidStr isEqualToString:uuidStr]) {
+            [muArr removeObject:model];
+            break;
+        }
+        
+    }
+    
+    NSMutableArray *endArr = [NSMutableArray array];
+    for (XQHistoryRecord *model in muArr) {
+        [endArr addObject:[model yy_modelToJSONString]];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:endArr forKey:XQ_UD_Key_JsonHistoryRecord];
+}
+
+/**
+ 删除model
+ */
++ (void)deleteWithModel:(XQHistoryRecord *)model {
+    [self deleteWithUUIDStr:model.uuidStr];
 }
 
 /**
@@ -77,6 +101,27 @@
         arr = [NSArray array];
     }
     return arr;
+}
+
+/**
+ 更新model
+ */
++ (void)updateModel:(XQHistoryRecord *)model {
+    NSMutableArray *muArr = [self readAllModels].mutableCopy;
+    for (int i = 0; i < muArr.count; i++) {
+        XQHistoryRecord *m = muArr[i];
+        if ([m.uuidStr isEqualToString:model.uuidStr]) {
+            [muArr replaceObjectAtIndex:i withObject:model];
+            break;
+        }
+    }
+    
+    NSMutableArray *endArr = [NSMutableArray array];
+    for (XQHistoryRecord *model in muArr) {
+        [endArr addObject:[model yy_modelToJSONString]];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:endArr forKey:XQ_UD_Key_JsonHistoryRecord];
 }
 
 @end

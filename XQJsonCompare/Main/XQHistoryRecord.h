@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XQHistoryRecord : NSObject
 
 /** 唯一id */
-@property (nonatomic, copy, readonly) NSString *uuidStr;
+@property (nonatomic, copy) NSString *uuidStr;
 
 /** 创建时间 */
 @property (nonatomic, copy) NSDate *createDate;
@@ -49,6 +49,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)writeWithModel:(XQHistoryRecord *)model;
 
 /**
+ 删除model
+ */
++ (void)deleteWithUUIDStr:(NSString *)uuidStr;
+
+/**
+ 删除model
+ */
++ (void)deleteWithModel:(XQHistoryRecord *)model;
+
+/**
  读取model
  */
 + (XQHistoryRecord *)readWithUUIDStr:(NSString *)uuidStr;
@@ -57,6 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
  读取model list
  */
 + (NSArray <XQHistoryRecord *> *)readAllModels;
+
+/**
+ 更新model
+ */
++ (void)updateModel:(XQHistoryRecord *)model;
 
 
 @end

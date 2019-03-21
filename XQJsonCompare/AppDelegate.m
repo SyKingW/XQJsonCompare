@@ -23,5 +23,14 @@
     // Insert code here to tear down your application
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+    NSLog(@"%s", __func__);
+    // 表示当前是没有window的
+    if (!flag) {
+        // 获取其中的window, 设到最前
+        [sender.windows.firstObject makeKeyAndOrderFront:nil];
+    }
+    return YES;
+}
 
 @end

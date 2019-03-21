@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40981FF2243931F00D1DC70 /* XQJCAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A40981FE2243931F00D1DC70 /* XQJCAboutVC.m */; };
 		A4114BE02240D2BE005756EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BDF2240D2BE005756EB /* AppDelegate.m */; };
 		A4114BE32240D2BE005756EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BE22240D2BE005756EB /* ViewController.m */; };
 		A4114BE52240D2BF005756EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4114BE42240D2BF005756EB /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		A4114BEB2240D2BF005756EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BEA2240D2BF005756EB /* main.m */; };
 		A4114BF62240D2BF005756EB /* XQJsonCompareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BF52240D2BF005756EB /* XQJsonCompareTests.m */; };
 		A4114C012240D2BF005756EB /* XQJsonCompareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */; };
+		A4609A1E224334DB0026DE58 /* XQHistoryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4609A1D224334DB0026DE58 /* XQHistoryCellView.m */; };
+		A4609A20224334E50026DE58 /* XQHistoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4609A1F224334E50026DE58 /* XQHistoryCellView.xib */; };
+		A4609A23224335AA0026DE58 /* XQJsonHandel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4609A22224335AA0026DE58 /* XQJsonHandel.m */; };
 		A490790D2241D53700FCE0BF /* XQHistoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A490790C2241D53700FCE0BF /* XQHistoryRecord.m */; };
 		A8D8BC4CFC6AB1A25919AEBE /* libPods-XQJsonCompareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB87250FD8C26264C0BE8E79 /* libPods-XQJsonCompareTests.a */; };
 		B2F758F404E015E35E2DB23F /* libPods-XQJsonCompareUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EC86E77BD76473DDA67F5B /* libPods-XQJsonCompareUITests.a */; };
@@ -43,6 +47,8 @@
 		35D6948452DB33F0274D7462 /* Pods-XQJsonCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareTests/Pods-XQJsonCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E8D218CD39BDF639A2891D7 /* Pods-XQJsonCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareTests/Pods-XQJsonCompareTests.release.xcconfig"; sourceTree = "<group>"; };
 		95747FE384128C99C43CC232 /* Pods-XQJsonCompareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompareUITests/Pods-XQJsonCompareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A40981FD2243931F00D1DC70 /* XQJCAboutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQJCAboutVC.h; sourceTree = "<group>"; };
+		A40981FE2243931F00D1DC70 /* XQJCAboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJCAboutVC.m; sourceTree = "<group>"; };
 		A4114BDB2240D2BE005756EB /* XQJsonCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQJsonCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4114BDE2240D2BE005756EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4114BDF2240D2BE005756EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +65,11 @@
 		A4114BFC2240D2BF005756EB /* XQJsonCompareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XQJsonCompareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJsonCompareUITests.m; sourceTree = "<group>"; };
 		A4114C022240D2BF005756EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4609A1C224334DB0026DE58 /* XQHistoryCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQHistoryCellView.h; sourceTree = "<group>"; };
+		A4609A1D224334DB0026DE58 /* XQHistoryCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQHistoryCellView.m; sourceTree = "<group>"; };
+		A4609A1F224334E50026DE58 /* XQHistoryCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XQHistoryCellView.xib; sourceTree = "<group>"; };
+		A4609A21224335AA0026DE58 /* XQJsonHandel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQJsonHandel.h; sourceTree = "<group>"; };
+		A4609A22224335AA0026DE58 /* XQJsonHandel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJsonHandel.m; sourceTree = "<group>"; };
 		A490790B2241D53700FCE0BF /* XQHistoryRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQHistoryRecord.h; sourceTree = "<group>"; };
 		A490790C2241D53700FCE0BF /* XQHistoryRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQHistoryRecord.m; sourceTree = "<group>"; };
 		AF4C23D6851B52522B169808 /* Pods-XQJsonCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQJsonCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQJsonCompare/Pods-XQJsonCompare.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +119,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A40981FC224392F800D1DC70 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4114BE12240D2BE005756EB /* ViewController.h */,
+				A4114BE22240D2BE005756EB /* ViewController.m */,
+				A4609A21224335AA0026DE58 /* XQJsonHandel.h */,
+				A4609A22224335AA0026DE58 /* XQJsonHandel.m */,
+				A4609A1C224334DB0026DE58 /* XQHistoryCellView.h */,
+				A4609A1D224334DB0026DE58 /* XQHistoryCellView.m */,
+				A4609A1F224334E50026DE58 /* XQHistoryCellView.xib */,
+				A490790B2241D53700FCE0BF /* XQHistoryRecord.h */,
+				A490790C2241D53700FCE0BF /* XQHistoryRecord.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A40982002243932400D1DC70 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A40981FD2243931F00D1DC70 /* XQJCAboutVC.h */,
+				A40981FE2243931F00D1DC70 /* XQJCAboutVC.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		A4114BD22240D2BE005756EB = {
 			isa = PBXGroup;
 			children = (
@@ -135,10 +171,8 @@
 			children = (
 				A4114BDE2240D2BE005756EB /* AppDelegate.h */,
 				A4114BDF2240D2BE005756EB /* AppDelegate.m */,
-				A4114BE12240D2BE005756EB /* ViewController.h */,
-				A4114BE22240D2BE005756EB /* ViewController.m */,
-				A490790B2241D53700FCE0BF /* XQHistoryRecord.h */,
-				A490790C2241D53700FCE0BF /* XQHistoryRecord.m */,
+				A40982002243932400D1DC70 /* About */,
+				A40981FC224392F800D1DC70 /* Main */,
 				A4114BE42240D2BF005756EB /* Assets.xcassets */,
 				A4114BE62240D2BF005756EB /* Main.storyboard */,
 				A4114BE92240D2BF005756EB /* Info.plist */,
@@ -246,6 +280,11 @@
 				TargetAttributes = {
 					A4114BDA2240D2BE005756EB = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					A4114BF02240D2BF005756EB = {
 						CreatedOnToolsVersion = 10.1;
@@ -284,6 +323,7 @@
 			files = (
 				A4114BE52240D2BF005756EB /* Assets.xcassets in Resources */,
 				A4114BE82240D2BF005756EB /* Main.storyboard in Resources */,
+				A4609A20224334E50026DE58 /* XQHistoryCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +419,10 @@
 			files = (
 				A4114BE32240D2BE005756EB /* ViewController.m in Sources */,
 				A4114BEB2240D2BF005756EB /* main.m in Sources */,
+				A4609A23224335AA0026DE58 /* XQJsonHandel.m in Sources */,
+				A4609A1E224334DB0026DE58 /* XQHistoryCellView.m in Sources */,
 				A490790D2241D53700FCE0BF /* XQHistoryRecord.m in Sources */,
+				A40981FF2243931F00D1DC70 /* XQJCAboutVC.m in Sources */,
 				A4114BE02240D2BE005756EB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
