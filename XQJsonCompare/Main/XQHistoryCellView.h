@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "XQTextField.h"
 
 @class XQHistoryCellView;
 
@@ -24,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XQHistoryCellView : NSView
 
-@property (weak) IBOutlet NSTextField *nameTF;
+@property (weak) IBOutlet XQTextField *nameTF;
 @property (weak) IBOutlet NSTextField *timeTF;
 
 /** <#note#> */

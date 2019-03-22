@@ -59,6 +59,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)deleteWithModel:(XQHistoryRecord *)model;
 
 /**
+ 删除所有model
+ */
++ (void)deleteAllModel;
+
+/**
  读取model
  */
 + (XQHistoryRecord *)readWithUUIDStr:(NSString *)uuidStr;

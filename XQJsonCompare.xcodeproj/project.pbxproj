@@ -15,6 +15,7 @@
 		A4114BEB2240D2BF005756EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BEA2240D2BF005756EB /* main.m */; };
 		A4114BF62240D2BF005756EB /* XQJsonCompareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114BF52240D2BF005756EB /* XQJsonCompareTests.m */; };
 		A4114C012240D2BF005756EB /* XQJsonCompareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */; };
+		A416B05E2244DFDF005770B3 /* XQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A416B05D2244DFDF005770B3 /* XQTextField.m */; };
 		A4609A1E224334DB0026DE58 /* XQHistoryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4609A1D224334DB0026DE58 /* XQHistoryCellView.m */; };
 		A4609A20224334E50026DE58 /* XQHistoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4609A1F224334E50026DE58 /* XQHistoryCellView.xib */; };
 		A4609A23224335AA0026DE58 /* XQJsonHandel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4609A22224335AA0026DE58 /* XQJsonHandel.m */; };
@@ -65,6 +66,8 @@
 		A4114BFC2240D2BF005756EB /* XQJsonCompareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XQJsonCompareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4114C002240D2BF005756EB /* XQJsonCompareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQJsonCompareUITests.m; sourceTree = "<group>"; };
 		A4114C022240D2BF005756EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A416B05C2244DFDF005770B3 /* XQTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQTextField.h; sourceTree = "<group>"; };
+		A416B05D2244DFDF005770B3 /* XQTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQTextField.m; sourceTree = "<group>"; };
 		A4609A1C224334DB0026DE58 /* XQHistoryCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XQHistoryCellView.h; sourceTree = "<group>"; };
 		A4609A1D224334DB0026DE58 /* XQHistoryCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XQHistoryCellView.m; sourceTree = "<group>"; };
 		A4609A1F224334E50026DE58 /* XQHistoryCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XQHistoryCellView.xib; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 			children = (
 				A4114BDE2240D2BE005756EB /* AppDelegate.h */,
 				A4114BDF2240D2BE005756EB /* AppDelegate.m */,
+				A416B05F2244DFE6005770B3 /* Tool */,
 				A40982002243932400D1DC70 /* About */,
 				A40981FC224392F800D1DC70 /* Main */,
 				A4114BE42240D2BF005756EB /* Assets.xcassets */,
@@ -198,6 +202,15 @@
 				A4114C022240D2BF005756EB /* Info.plist */,
 			);
 			path = XQJsonCompareUITests;
+			sourceTree = "<group>";
+		};
+		A416B05F2244DFE6005770B3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A416B05C2244DFDF005770B3 /* XQTextField.h */,
+				A416B05D2244DFDF005770B3 /* XQTextField.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		B4ACAB41AB29C0AD57B8DC24 /* Frameworks */ = {
@@ -419,6 +432,7 @@
 			files = (
 				A4114BE32240D2BE005756EB /* ViewController.m in Sources */,
 				A4114BEB2240D2BF005756EB /* main.m in Sources */,
+				A416B05E2244DFDF005770B3 /* XQTextField.m in Sources */,
 				A4609A23224335AA0026DE58 /* XQJsonHandel.m in Sources */,
 				A4609A1E224334DB0026DE58 /* XQHistoryCellView.m in Sources */,
 				A490790D2241D53700FCE0BF /* XQHistoryRecord.m in Sources */,

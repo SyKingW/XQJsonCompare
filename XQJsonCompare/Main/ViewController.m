@@ -81,6 +81,11 @@
 
 #pragma mark - respondsTo
 
+- (IBAction)respondsToDeleteAllHistory:(id)sender {
+    [XQHistoryRecord deleteAllModel];
+    [self getData];
+}
+
 - (IBAction)respondsToOutResult:(id)sender {
     if (!self.currentModel) {
         [XQAlertSystem alertSheetWithTitle:@"当前页面没有运算结果" message:@"" contentArr:@[@"确定"] callback:nil];
@@ -167,7 +172,11 @@
 #pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    XQHistoryCellView *view = [tableView makeViewWithIdentifier:XQHistoryCellView_ID owner:self];
+    XQHistoryCellView *view = [tableView viewAtColumn:0 row:row makeIfNecessary:YES];
+    if (!view) {
+        // 发现一直不会去释放这些view....不知道持有机制到底在哪
+        view = [tableView makeViewWithIdentifier:XQHistoryCellView_ID owner:nil];
+    }
     
     XQHistoryRecord *model = self.modelArr[row];
     
@@ -215,7 +224,7 @@
 - (void)historyCellView:(XQHistoryCellView *)historyCellView nameTextDidChange:(NSTextField *)nameTF {
     NSInteger row = [self.tableView rowForView:historyCellView];
     XQHistoryRecord *model = self.modelArr[row];
-    model.name = nameTF.stringValue;
+    model.name = nameTF.stringValue ? nameTF.stringValue : @"";
     [XQHistoryRecord updateModel:model];
 }
 

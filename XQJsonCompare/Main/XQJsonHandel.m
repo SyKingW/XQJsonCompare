@@ -17,19 +17,16 @@
         if (callback) {
             callback(nil, XQAnalysisErrorNil);
         }
+        NSLog(@"数据空");
         return;
     }
-    
-    for (int i = 0; i < json1.length; i++) {
-        NSLog(@"%@", [json1 substringWithRange:NSMakeRange(i, 1)]);
-    }
-    
     
     NSDictionary *oneDic = [NSDictionary dictionaryWithJsonString:json1];
     if (!oneDic) {
         if (callback) {
             callback(nil, XQAnalysisErrorJson1Error);
         }
+        NSLog(@"数据1错误");
         return;
     }
     
@@ -38,6 +35,7 @@
         if (callback) {
             callback(nil, XQAnalysisErrorJson2Error);
         }
+        NSLog(@"数据2错误");
         return;
     }
     
@@ -61,17 +59,19 @@
     // 第二个json相比第一个json, 多出的key
     [twoMinusSet minusSet:oneSet];
     
-    
-    //    self.oneMinusTView.string = [[self class] strWithSet:oneMinusSet dic:oneDic];
-    //    self.twoMinusTView.string = [[self class] strWithSet:twoMinusSet dic:twoDic];
-    
     //    NSLog(@"\n交集:%@ \none多出key:%@, \ntwo多出key:%@", intersectSet, oneMinusSet, twoMinusSet);
     
-    // 对比相同key的value
+    // 不同k
+    NSMutableDictionary *oneMinusDic = [self dicWithSet:oneMinusSet dic:oneDic].mutableCopy;
+    NSMutableDictionary *twoMinusDic = [self dicWithSet:twoMinusSet dic:twoDic].mutableCopy;
+    
+    // 相同k不同v
     NSMutableDictionary *oneMuDic = [NSMutableDictionary dictionary];
     NSMutableDictionary *twoMuDic = [NSMutableDictionary dictionary];
     
+    // 同k同v
     NSMutableDictionary *equalMuDic = [NSMutableDictionary dictionary];
+    
     
     for (NSString *key in intersectSet.allObjects) {
         // 对比类型
@@ -85,13 +85,38 @@
             // 字段要做额外处理, 这里要写一个循环....
             // 不过其实一般情况来说, 要求人家自己来弄更舒服点...不然这样循环出来, 你还要去显示，也要很麻烦..
             if (![oneDic[key] isEqualToDictionary:twoDic[key]]) {
-                [oneMuDic addEntriesFromDictionary:@{key: oneDic[key]}];
-                [twoMuDic addEntriesFromDictionary:@{key: twoDic[key]}];
+//                [oneMuDic addEntriesFromDictionary:@{key: oneDic[key]}];
+//                [twoMuDic addEntriesFromDictionary:@{key: twoDic[key]}];
                 
                 
-//                [self modelWithJson1:[oneDic[key] yy_modelToJSONString] json2:[twoDic[key] yy_modelToJSONString] callback:^(XQHistoryRecord * _Nonnull model, XQAnalysisError error) {
-//
-//                }];
+                [self modelWithJson1:[oneDic[key] yy_modelToJSONString] json2:[twoDic[key] yy_modelToJSONString] callback:^(XQHistoryRecord * _Nonnull model, XQAnalysisError error) {
+                    
+                    NSDictionary *json1ToJson2KeyMinus = [NSDictionary dictionaryWithJsonString:model.json1ToJson2KeyMinus];
+                    if (json1ToJson2KeyMinus.allKeys.count != 0) {
+                        [oneMinusDic addEntriesFromDictionary:@{key: json1ToJson2KeyMinus}];
+                    }
+                    
+                    NSDictionary *json2ToJson1KeyMinus = [NSDictionary dictionaryWithJsonString:model.json2ToJson1KeyMinus];
+                    if (json2ToJson1KeyMinus.allKeys.count != 0) {
+                        [twoMinusDic addEntriesFromDictionary:@{key: json2ToJson1KeyMinus}];
+                    }
+                    
+                    NSDictionary *json1ValueDifference = [NSDictionary dictionaryWithJsonString:model.json1ValueDifference];
+                    if (json1ValueDifference.allKeys.count != 0) {
+                        [oneMuDic addEntriesFromDictionary:@{key: json1ValueDifference}];
+                    }
+                    
+                    NSDictionary *json2ValueDifference = [NSDictionary dictionaryWithJsonString:model.json2ValueDifference];
+                    if (json2ValueDifference.allKeys.count != 0) {
+                        [twoMuDic addEntriesFromDictionary:@{key: json2ValueDifference}];
+                    }
+                    
+                    NSDictionary *equalJson = [NSDictionary dictionaryWithJsonString:model.equalJson];
+                    if (equalJson.allKeys.count != 0) {
+                        [equalMuDic addEntriesFromDictionary:@{key: equalJson}];
+                    }
+                    
+                }];
                 
                 continue;
             }
@@ -152,8 +177,8 @@
         XQHistoryRecord *model = [XQHistoryRecord new];
         model.json1 = json1;
         model.json2 = json2;
-        model.json1ToJson2KeyMinus = [[self class] strWithSet:oneMinusSet dic:oneDic];
-        model.json2ToJson1KeyMinus = [[self class] strWithSet:twoMinusSet dic:twoDic];
+        model.json1ToJson2KeyMinus = [NSDictionary jsonStrWithDic:oneMinusDic];
+        model.json2ToJson1KeyMinus = [NSDictionary jsonStrWithDic:twoMinusDic];
         model.json1ValueDifference = [NSDictionary jsonStrWithDic:oneMuDic];
         model.json2ValueDifference = [NSDictionary jsonStrWithDic:twoMuDic];
         model.equalJson = [NSDictionary jsonStrWithDic:equalMuDic];
@@ -168,11 +193,15 @@
  @param dic 原数据
  */
 + (NSString *)strWithSet:(NSSet *)set dic:(NSDictionary *)dic {
+    return [NSDictionary jsonStrWithDic:[self dicWithSet:set dic:dic]];
+}
+
++ (NSDictionary *)dicWithSet:(NSSet *)set dic:(NSDictionary *)dic {
     NSMutableDictionary *muDic = [NSMutableDictionary dictionary];
     for (NSString *key in set.allObjects) {
         [muDic addEntriesFromDictionary:@{key: dic[key]}];
     }
-    return [NSDictionary jsonStrWithDic:muDic];
+    return muDic;
 }
 
 /**

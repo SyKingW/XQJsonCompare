@@ -1060,8 +1060,8 @@
                                     <action selector="respondsToRemoveFormat:" target="XfG-lQ-9wD" id="GCY-kK-nbI"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l9v-Sa-g7e">
-                                <rect key="frame" x="664" y="626" width="351" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l9v-Sa-g7e">
+                                <rect key="frame" x="728" y="624" width="351" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="(默认快捷键 command + 1 对比, + 2 导出结果, 后面依次)" id="xcr-IN-Z67">
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1078,10 +1078,21 @@
                                     <action selector="respondsToRemoveChinese:" target="XfG-lQ-9wD" id="i8I-GM-KQX"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T9j-EL-8f4">
+                                <rect key="frame" x="584" y="615" width="147" height="32"/>
+                                <buttonCell key="cell" type="push" title="一键删除历史记录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7im-48-3aw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="respondsToDeleteAllHistory:" target="XfG-lQ-9wD" id="fQz-hY-A2Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="H57-LG-Fap" firstAttribute="height" secondItem="R1c-W9-4Yz" secondAttribute="height" id="07r-OT-q5Q"/>
                             <constraint firstItem="66T-HZ-nAg" firstAttribute="height" secondItem="vpi-df-Vzl" secondAttribute="height" id="0ih-gk-unn"/>
+                            <constraint firstItem="T9j-EL-8f4" firstAttribute="centerY" secondItem="Ac0-6b-whe" secondAttribute="centerY" id="0p6-lH-gEw"/>
                             <constraint firstItem="e4k-p3-Rno" firstAttribute="leading" secondItem="Yoy-ub-qCx" secondAttribute="leading" id="0zw-0b-tYA"/>
                             <constraint firstItem="Yoy-ub-qCx" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="0.35" id="1Ut-fG-nRA"/>
                             <constraint firstItem="zLQ-it-nbp" firstAttribute="top" secondItem="UiT-oK-9WI" secondAttribute="bottom" constant="21" id="2VF-QQ-nye"/>
@@ -1095,6 +1106,7 @@
                             <constraint firstItem="yLs-Q2-UEJ" firstAttribute="centerY" secondItem="e4k-p3-Rno" secondAttribute="centerY" id="BaB-QF-F76"/>
                             <constraint firstItem="JKV-uc-LoY" firstAttribute="top" secondItem="hXn-sC-JY7" secondAttribute="bottom" constant="10" id="BuQ-Og-QfH"/>
                             <constraint firstItem="hHW-Tw-OG8" firstAttribute="centerY" secondItem="Yoy-ub-qCx" secondAttribute="centerY" id="DSI-gb-YiP"/>
+                            <constraint firstItem="l9v-Sa-g7e" firstAttribute="centerY" secondItem="T9j-EL-8f4" secondAttribute="centerY" id="E1u-9P-r00"/>
                             <constraint firstItem="Ac0-6b-whe" firstAttribute="leading" secondItem="dgk-d5-VnY" secondAttribute="trailing" constant="10" id="ETF-mV-Axp"/>
                             <constraint firstItem="66T-HZ-nAg" firstAttribute="width" secondItem="vpi-df-Vzl" secondAttribute="width" id="FvK-o4-mPv"/>
                             <constraint firstItem="UiT-oK-9WI" firstAttribute="leading" secondItem="Yoy-ub-qCx" secondAttribute="leading" id="FyV-5w-4o5"/>
@@ -1104,8 +1116,9 @@
                             <constraint firstItem="vpi-df-Vzl" firstAttribute="top" secondItem="yLs-Q2-UEJ" secondAttribute="bottom" constant="10" id="IVU-uu-pDE"/>
                             <constraint firstItem="66T-HZ-nAg" firstAttribute="leading" secondItem="Yoy-ub-qCx" secondAttribute="leading" id="Jzf-r3-Nf3"/>
                             <constraint firstItem="5kn-Uz-rCu" firstAttribute="centerY" secondItem="vxr-QN-1gC" secondAttribute="centerY" id="K2T-Ud-m4d"/>
+                            <constraint firstItem="l9v-Sa-g7e" firstAttribute="leading" secondItem="T9j-EL-8f4" secondAttribute="trailing" constant="5" id="LUL-Mc-EPc"/>
                             <constraint firstItem="vxr-QN-1gC" firstAttribute="width" secondItem="SlL-cG-WEC" secondAttribute="width" id="Ll1-vX-tv1"/>
-                            <constraint firstItem="l9v-Sa-g7e" firstAttribute="centerY" secondItem="dgk-d5-VnY" secondAttribute="centerY" id="NnJ-fX-EEn"/>
+                            <constraint firstItem="T9j-EL-8f4" firstAttribute="leading" secondItem="Ac0-6b-whe" secondAttribute="trailing" constant="10" id="Ocb-MF-bz0"/>
                             <constraint firstAttribute="bottom" secondItem="sBV-gV-Alr" secondAttribute="bottom" id="QGW-w3-gDZ"/>
                             <constraint firstItem="Ac0-6b-whe" firstAttribute="centerY" secondItem="dgk-d5-VnY" secondAttribute="centerY" id="Shh-aj-5ql"/>
                             <constraint firstItem="H57-LG-Fap" firstAttribute="top" secondItem="ujX-MQ-tOX" secondAttribute="bottom" constant="10" id="TK4-Ln-XAV"/>

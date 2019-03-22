@@ -51,7 +51,7 @@
                         <action selector="respondsToDelete:" target="c22-O7-iKe" id="qwA-1U-qPv"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-7f-eML">
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-7f-eML" customClass="XQTextField">
                     <rect key="frame" x="10" y="319" width="450" height="22"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="name" drawsBackground="YES" id="jWa-qZ-kwf">
                         <font key="font" metaFont="system"/>

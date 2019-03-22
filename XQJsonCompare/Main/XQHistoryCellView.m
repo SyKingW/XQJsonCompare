@@ -8,7 +8,7 @@
 
 #import "XQHistoryCellView.h"
 
-@interface XQHistoryCellView ()
+@interface XQHistoryCellView () <XQTextFieldDelegate>
 
 @end
 
@@ -16,7 +16,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification_textChange:) name:NSTextDidChangeNotification object:nil];
+    self.nameTF.xq_delegate = self;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
@@ -38,14 +38,14 @@
     [self.delegate historyCellView:self tapDelete:sender];
 }
 
-#pragma mark - Notification
+#pragma mark - XQTextFieldDelegate
 
-- (void)notification_textChange:(NSNotification *)notification {
+- (void)textField:(XQTextField *)textField textDidChange:(NSNotification *)notification {
     [self.delegate historyCellView:self nameTextDidChange:self.nameTF];
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%s", __func__);
 }
 
 @end

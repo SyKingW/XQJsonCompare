@@ -66,6 +66,13 @@
 }
 
 /**
+ 删除所有model
+ */
++ (void)deleteAllModel {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:XQ_UD_Key_JsonHistoryRecord];
+}
+
+/**
  读取model
  */
 + (XQHistoryRecord *)readWithUUIDStr:(NSString *)uuidStr {
