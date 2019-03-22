@@ -8,6 +8,7 @@
 
 #import "XQHistoryRecord.h"
 #import <YYModel/YYModel.h>
+#import <XQProjectTool/XQPredicate.h>
 
 #define XQ_UD_Key_JsonHistoryRecord @"XQ_UD_Key_JsonHistoryRecord"
 
@@ -107,14 +108,27 @@
  更新model
  */
 + (void)updateModel:(XQHistoryRecord *)model {
-    NSMutableArray *muArr = [self readAllModels].mutableCopy;
-    for (int i = 0; i < muArr.count; i++) {
-        XQHistoryRecord *m = muArr[i];
-        if ([m.uuidStr isEqualToString:model.uuidStr]) {
-            [muArr replaceObjectAtIndex:i withObject:model];
-            break;
-        }
+    if (!model || model.uuidStr.length == 0) {
+        return;
     }
+    
+    NSMutableArray *muArr = [self readAllModels].mutableCopy;
+    
+    NSArray *arr = [XQPredicate predicateKeyEqWithDataArr:muArr value:model.uuidStr key:@"uuidStr"];
+    if (arr.count != 1) {
+        // 0 or 多个， 不处理
+        return;
+    }
+    
+    [muArr replaceObjectAtIndex:[muArr indexOfObject:arr.firstObject] withObject:model];
+    
+//    for (int i = 0; i < muArr.count; i++) {
+//        XQHistoryRecord *m = muArr[i];
+//        if ([m.uuidStr isEqualToString:model.uuidStr]) {
+//            [muArr replaceObjectAtIndex:i withObject:model];
+//            break;
+//        }
+//    }
     
     NSMutableArray *endArr = [NSMutableArray array];
     for (XQHistoryRecord *model in muArr) {

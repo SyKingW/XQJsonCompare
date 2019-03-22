@@ -20,18 +20,20 @@
         return;
     }
     
-    NSDictionary *oneDic = [NSDictionary dictionaryWithJsonString:[[self class] filterChineseSymbolWithStr:json1]];
+    for (int i = 0; i < json1.length; i++) {
+        NSLog(@"%@", [json1 substringWithRange:NSMakeRange(i, 1)]);
+    }
+    
+    
+    NSDictionary *oneDic = [NSDictionary dictionaryWithJsonString:json1];
     if (!oneDic) {
-        
-        NSLog(@"%@, %@", json1, [json1 yy_modelToJSONString]);
-        
         if (callback) {
             callback(nil, XQAnalysisErrorJson1Error);
         }
         return;
     }
     
-    NSDictionary *twoDic = [NSDictionary dictionaryWithJsonString:[[self class] filterChineseSymbolWithStr:json2]];
+    NSDictionary *twoDic = [NSDictionary dictionaryWithJsonString:json2];
     if (!twoDic) {
         if (callback) {
             callback(nil, XQAnalysisErrorJson2Error);
@@ -85,6 +87,12 @@
             if (![oneDic[key] isEqualToDictionary:twoDic[key]]) {
                 [oneMuDic addEntriesFromDictionary:@{key: oneDic[key]}];
                 [twoMuDic addEntriesFromDictionary:@{key: twoDic[key]}];
+                
+                
+//                [self modelWithJson1:[oneDic[key] yy_modelToJSONString] json2:[twoDic[key] yy_modelToJSONString] callback:^(XQHistoryRecord * _Nonnull model, XQAnalysisError error) {
+//
+//                }];
+                
                 continue;
             }
             
@@ -171,6 +179,10 @@
  过滤中文符号
  */
 + (NSString *)filterChineseSymbolWithStr:(NSString *)str {
+    if (str.length == 0) {
+        return @"";
+    }
+    
     // 中文符号转换
     unichar c = 8221;
     NSString *strC = [NSString stringWithCharacters:&c length:1];

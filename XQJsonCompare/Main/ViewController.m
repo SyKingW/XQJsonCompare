@@ -71,6 +71,7 @@
     [[XQRegisterHotKey manager] xq_registerCustomHotKeyWithSignature:18 keyID:18 inHotKeyCode:18 modifiers:XQModifiersCmdKeyBit];
     [[XQRegisterHotKey manager] xq_registerCustomHotKeyWithSignature:19 keyID:19 inHotKeyCode:19 modifiers:XQModifiersCmdKeyBit];
     [[XQRegisterHotKey manager] xq_registerCustomHotKeyWithSignature:20 keyID:20 inHotKeyCode:20 modifiers:XQModifiersCmdKeyBit];
+    [[XQRegisterHotKey manager] xq_registerCustomHotKeyWithSignature:21 keyID:21 inHotKeyCode:21 modifiers:XQModifiersCmdKeyBit];
 }
 
 - (void)getData {
@@ -91,6 +92,11 @@
 - (IBAction)respondsToRemoveFormat:(id)sender {
     self.oneView.string = [XQJsonHandel xq_removeFormatWithStr:self.oneView.string];
     self.twoView.string = [XQJsonHandel xq_removeFormatWithStr:self.twoView.string];
+}
+
+- (IBAction)respondsToRemoveChinese:(id)sender {
+    self.oneView.string = [XQJsonHandel filterChineseSymbolWithStr:self.oneView.string];
+    self.twoView.string = [XQJsonHandel filterChineseSymbolWithStr:self.twoView.string];
 }
 
 - (IBAction)respondsToAnalysis:(id)sender {
@@ -229,6 +235,11 @@
             
         case 20:{
             [self respondsToRemoveFormat:nil];
+        }
+            break;
+            
+        case 21:{
+            [self respondsToRemoveChinese:nil];
         }
             break;
             

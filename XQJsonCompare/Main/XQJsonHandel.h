@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)modelWithJson1:(NSString *)json1 json2:(NSString *)json2 callback:(void(^)(XQHistoryRecord *model, XQAnalysisError error))callback;
 
 /**
+ 过滤中文符号
+ */
++ (NSString *)filterChineseSymbolWithStr:(NSString *)str;
+
+/**
  去转义
  
  @note 例如 {\"sd\":\"sd\" }
