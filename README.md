@@ -9,7 +9,7 @@
 
 # 示例
 ## 对比图
-![示例图](https://github.com/SyKingW/XQJsonCompare/blob/master/Image/C293D8BF-37DD-403A-A8FC-9CF61942523B.png)
+![对比图](https://github.com/SyKingW/XQJsonCompare/blob/master/Image/33C0833F-A374-4FA5-B478-6A302EB61057.png)
 
 ## 导出MD文件
-![示例图](https://github.com/SyKingW/XQJsonCompare/blob/master/Image/FF372130-7CCE-4B3E-BBAC-D171460AA3E3.png)
+![导出MD文件](https://github.com/SyKingW/XQJsonCompare/blob/master/Image/FF372130-7CCE-4B3E-BBAC-D171460AA3E3.png)
